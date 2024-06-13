@@ -8,9 +8,9 @@ system:
   port: 8080
   # 是否初始化数据(没有初始数据时使用, 已发布正式版改为false)
   init-data: true
-  # rsa公钥文件路径(config.yml相对路径, 也可以填绝对路径)
+  # rsa公钥文件路径(config.yml相对路径, 也可以填绝对路径) openssl rsa -in private.pem -pubout -out public.pem
   rsa-public-key: public.pem
-  # rsa私钥文件路径(config.yml相对路径, 也可以填绝对路径)
+  # rsa私钥文件路径(config.yml相对路径, 也可以填绝对路径) openssl genrsa -out private.pem 4096
   rsa-private-key: private.pem
 
 logs:
@@ -33,7 +33,7 @@ mysql:
   # 密码
   password: 123456
   # 数据库名
-  database: go_web_mini
+  database: go_web_template
   # 主机地址
   host: localhost
   # 端口
